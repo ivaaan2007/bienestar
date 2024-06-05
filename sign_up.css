@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* Estilo para la página completa */
+.full_page {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo para la sección izquierda */
+.left_section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+.left_section .logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text_sign_up {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+.left_side {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.left_side li {
+    margin: 20px ;
+}
+
+/*Estilos parte derecha del formulario*/
+.right_section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background-color: white;
+    border-radius: 20px;
+    margin: auto;
+    opacity: 0.9;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.right_section form {
+    width: 100%;
+    max-width: 400px;
+}
+/* Estilos para ocultar la lista de facultades inicialmente */
+.faculties {
+    display: none;
+    margin: 15px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);;
+}
+
+.right_section form label {
+    display: block;
+    margin-bottom: 10px;
+}
+.right_section form input[type="text"],
+.right_section form input[type="password"],
+.right_section form input[type="email"] {
+    width: 100%;
+    padding: 18px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+}
+.right_section form input[type="text"]:focus,
+.right_section form input[type="password"]:focus,
+.right_section form input[type="email"]:focus{
+    outline: 3px solid #007BFF;
+}
+.right_section button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 20px;
+}
+.right_section button[type="submit"]:hover{
+    background-color: #00b4d8;
+    color: #003049;
+}
+.right_section button[type="submit"] a{
+    text-decoration: none; /* Quita la subrayado del texto del botón "Ingresar" */
+    color: white; /* Cambia el color del texto del botón "Ingresar" */
+}
+.right_section button[type="submit"]:active{
+    outline: 3px solid #007BFF;
+    outline-offset: 2px;
+}
+
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    body{
+        background-size: auto;
+    }
+
+    .full_page {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left_section {
+        order: 2;
+        width: 95%;
+        padding: 10px;
+    }
+
+    .right_section {
+        order: 2;
+        width: 90%;
+        padding: 15px;
+    }
+
+    .right_section form {
+        max-width: 95%;
+    }
+}

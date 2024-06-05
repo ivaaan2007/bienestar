@@ -1,0 +1,111 @@
+*{
+      margin: 0;
+      padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(#fff,#d00000,#000);
+}
+h1{
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+}
+/*Estilos logo bienestar*/
+.main_login img{
+    display: block;
+    margin: auto;
+    width: 500px;;
+    height: auto;
+}
+.main_login{
+    background-color: white;
+    padding: 60px;
+    border-radius: 35px;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del elemento */
+    max-width: 90%; /* Limita el tamaño máximo del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+/*Estilos para inputs*/
+.main_login input[type="text"],input[type="password"]{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+}
+.main_login input[type="text"]::placeholder,input[type="password"]::placeholder{
+    color: rgba(0, 0, 0, 0.3); /* Color negro con 50% de transparencia */
+}
+/*Estilos para boton*/
+.main_login button[type="submit"]{
+    display: block;
+    width: 50%;
+    margin: 20px auto 0 auto;/*Centrar el boton en la mitad del formulario*/
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #007BFF;
+    cursor: pointer;
+    font-size: 20px;
+}
+.main_login button:hover {
+    background-color: #00b4d8;
+}
+.main_login button:active {
+    outline: 2px solid #00b4d8;
+    outline-offset: 1px;
+}
+
+/* Estilo para el texto del botón "Ingresar" */
+.main_login button[type="submit"] a {
+    text-decoration: none; /* Quita la subrayado del texto del botón "Ingresar" */
+    color: white; /* Cambia el color del texto del botón "Ingresar" */
+}
+
+.main_login input[type="text"]:focus , input[type="password"]:focus {
+    outline: 3px solid #007BFF;
+    /* Outline azul cuando está enfocado */
+}
+/*Estilos label de login*/
+.main_login label{
+    margin-bottom: 10px;
+    display: block;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/*Estilos p de login*/
+.main_login p{
+    text-align: center;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#registro{
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #023e8a;
+    font-size: 22px;
+}
+/*Color cuando el link haya sido*/
+#registro:active{
+    color:#ae2012;
+}
+/*Medias para ajustar en pantallas*/
+@media (max-width: 768px) {
+    .main_login {
+        padding: 10%;
+    }
+    .main_login img {
+        width: 90%;
+    }
+}
